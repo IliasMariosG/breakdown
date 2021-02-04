@@ -22,4 +22,8 @@ class Encoder
   def is_all_this_letter?(word, letter)
     string_to_list(word).all? { |element| element == letter }
   end
+
+  def is_all_first_letter?(word)
+    string_to_list(word).all? { |element| element ==  get_first_letter(word)}
+  end
 end
