@@ -55,13 +55,13 @@ RSpec.describe Encoder do
   # INSTRUCTION: Do a commit before uncommenting the next test.
   # INSTRUCTION: Talk to your coach before moving on.
 
-  # it "converts a string to a list of letters" do
-  #   encoder = Encoder.new
-  #   result_1 = encoder.string_to_list("aaa")
-  #   result_2 = encoder.string_to_list("bbbbb")
-  #   expect(result_1).to eq ["a", "a", "a"]
-  #   expect(result_2).to eq ["b", "b", "b", "b", "b"]
-  # end
+  it "converts a string to a list of letters" do
+    encoder = Encoder.new
+    result_1 = encoder.string_to_list("aaa")
+    result_2 = encoder.string_to_list("bbbbb")
+    expect(result_1).to eq ["a", "a", "a"]
+    expect(result_2).to eq ["b", "b", "b", "b", "b"]
+  end
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
