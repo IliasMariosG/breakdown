@@ -26,4 +26,9 @@ class Encoder
   def is_all_first_letter?(word)
     string_to_list(word).all? { |element| element ==  get_first_letter(word)}
   end
+
+  def get_length_of_first_run(word)
+    consecutive_characters_length = word.each_char.chunk_while(&:==).map(&:length)
+    consecutive_characters_length[0]
+  end
 end
