@@ -18,4 +18,8 @@ class Encoder
   def is_all_as?(word)
     string_to_list(word).all? { |element| element == 'a' } 
   end
+
+  def is_all_this_letter?(word, letter)
+    string_to_list(word).all? { |element| element == letter }
+  end
 end
