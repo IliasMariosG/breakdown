@@ -44,13 +44,13 @@ RSpec.describe Encoder do
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
-  # it "gets the first letter and the length" do
-  #   encoder = Encoder.new
-  #   result_1 = encoder.get_first_letter_and_length("aaa")
-  #   result_2 = encoder.get_first_letter_and_length("bbbbb")
-  #   expect(result_1).to eq "a3"
-  #   expect(result_2).to eq "b5"
-  # end
+  it "gets the first letter and the length" do
+    encoder = Encoder.new
+    result_1 = encoder.get_first_letter_and_length("aaa")
+    result_2 = encoder.get_first_letter_and_length("bbbbb")
+    expect(result_1).to eq "a3"
+    expect(result_2).to eq "b5"
+  end
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
   # INSTRUCTION: Talk to your coach before moving on.
