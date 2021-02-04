@@ -31,4 +31,9 @@ class Encoder
     consecutive_characters_length = word.each_char.chunk_while(&:==).map(&:length)
     consecutive_characters_length[0]
   end
+
+  def get_first_run(word)
+    consecutive_characters = word.each_char.chunk_while(&:==).map(&:join)
+    consecutive_characters[0]
+  end
 end
