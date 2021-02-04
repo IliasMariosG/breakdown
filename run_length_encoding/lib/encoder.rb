@@ -12,6 +12,10 @@ class Encoder
   end
 
   def string_to_list(word)
-    p word.split('')
+    word.split('')
+  end
+
+  def is_all_as?(word)
+    string_to_list(word).all? { |element| element == 'a' } 
   end
 end
