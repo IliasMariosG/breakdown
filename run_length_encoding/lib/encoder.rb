@@ -38,7 +38,6 @@ class Encoder
   end
 
   def get_after_first_run(word)
-    word.slice! get_first_run(word).to_s
-    word
+    word[get_length(word[get_first_run(word)])..get_length(word)]
   end
 end
