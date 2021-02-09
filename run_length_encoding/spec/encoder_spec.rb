@@ -162,15 +162,15 @@ RSpec.describe Encoder do
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
-  # it "gets first letter and lengths of all runs" do
-  #   encoder = Encoder.new
-  #   result_1 = encoder.get_first_letter_and_length_of_runs("aaabba")
-  #   result_2 = encoder.get_first_letter_and_length_of_runs("bba")
-  #   result_3 = encoder.get_first_letter_and_length_of_runs("a")
-  #   expect(result_1).to eq ["a3", "b2", "a1"]
-  #   expect(result_2).to eq ["b2", "a1"]
-  #   expect(result_3).to eq ["a1"]
-  # end
+  it "gets first letter and lengths of all runs" do
+    encoder = Encoder.new
+    result_1 = encoder.get_first_letter_and_length_of_runs("aaabba")
+    result_2 = encoder.get_first_letter_and_length_of_runs("bba")
+    result_3 = encoder.get_first_letter_and_length_of_runs("a")
+    expect(result_1).to eq ["a3", "b2", "a1"]
+    expect(result_2).to eq ["b2", "a1"]
+    expect(result_3).to eq ["a1"]
+  end
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
