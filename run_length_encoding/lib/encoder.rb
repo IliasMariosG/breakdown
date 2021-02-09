@@ -28,16 +28,27 @@ class Encoder
   end
 
   def get_length_of_first_run(word)
-    consecutive_characters_length = word.each_char.chunk_while(&:==).map(&:length)
-    consecutive_characters_length[0]
+    first_chunk = word.each_char.chunk_while(&:==).first
+    first_chunk.length
   end
 
   def get_first_run(word)
-    consecutive_characters = word.each_char.chunk_while(&:==).map(&:join)
-    consecutive_characters[0]
+    first_chunk = word.each_char.chunk_while(&:==).first
+    first_chunk.join('')
   end
 
   def get_after_first_run(word)
-    word[get_length(word[get_first_run(word)])..get_length(word)]
+    word[get_length_of_first_run(word)..]
+  end
+
+  def get_all_runs(word)
+    runs = []
+    while word.length > 0
+      first_run = get_first_run(word)
+      runs << first_run
+      rest_of_string = get_after_first_run(word)
+      word = rest_of_string
+    end
+    runs
   end
 end
