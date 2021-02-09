@@ -61,7 +61,7 @@ class Encoder
   def get_first_letter_and_length_of_runs(word)
     first_letters_all_runs_length = []
     get_all_runs(word).each { |chunk|
-      first_letters_all_runs_length << "#{get_first_letter(chunk)}#{get_length(chunk)}" }
+      first_letters_all_runs_length << "#{get_first_letter_and_length(chunk)}" }
     first_letters_all_runs_length
   end
 end
