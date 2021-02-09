@@ -64,4 +64,16 @@ class Encoder
       first_letters_all_runs_length << "#{get_first_letter_and_length(chunk)}" }
     first_letters_all_runs_length
   end
+
+  def get_first_letter_and_length_of_runs_with_special(word)
+    first_letters_all_runs_length = []
+    get_all_runs(word).each { |chunk|
+      if chunk.length > 1
+        first_letters_all_runs_length << "#{get_first_letter(chunk)}#{get_length(chunk)}"
+      else
+        first_letters_all_runs_length << "#{get_first_letter(chunk)}"
+      end
+    }
+    first_letters_all_runs_length
+  end
 end
