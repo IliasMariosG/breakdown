@@ -51,4 +51,10 @@ class Encoder
     end
     runs
   end
+
+  def get_lengths_of_all_runs(word)
+    lengths = []
+    get_all_runs(word).each{ |element| lengths << get_length(element) }
+    lengths
+  end
 end
