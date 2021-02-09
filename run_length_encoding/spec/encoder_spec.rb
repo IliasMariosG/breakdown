@@ -186,13 +186,13 @@ RSpec.describe Encoder do
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
-  # it "re-combines the strings and so does run length encoding fully" do
-  #   encoder = Encoder.new
-  #   result_1 = encoder.encode("abba")
-  #   result_2 = encoder.encode("roooooaaaaaarrr")
-  #   result_3 = encoder.encode("woooooooooooo i am doing iiiit!!!")
-  #   expect(result_1).to eq "ab2a"
-  #   expect(result_2).to eq "ro5a6r3"
-  #   expect(result_3).to eq "wo12 i am doing i4t!3"
-  # end
+  it "re-combines the strings and so does run length encoding fully" do
+    encoder = Encoder.new
+    result_1 = encoder.encode("abba")
+    result_2 = encoder.encode("roooooaaaaaarrr")
+    result_3 = encoder.encode("woooooooooooo i am doing iiiit!!!")
+    expect(result_1).to eq "ab2a"
+    expect(result_2).to eq "ro5a6r3"
+    expect(result_3).to eq "wo12 i am doing i4t!3"
+  end
 end

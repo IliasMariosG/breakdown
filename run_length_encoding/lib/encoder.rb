@@ -76,4 +76,8 @@ class Encoder
     }
     first_letters_all_runs_length
   end
+
+  def encode(word)
+    get_first_letter_and_length_of_runs_with_special(word).join('')
+  end
 end
